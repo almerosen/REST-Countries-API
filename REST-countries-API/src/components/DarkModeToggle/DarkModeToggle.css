@@ -1,0 +1,56 @@
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--input-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2.5px;
+    background-color: var(--element-color);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--text-color);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }

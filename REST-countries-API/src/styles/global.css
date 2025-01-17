@@ -1,0 +1,45 @@
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root {
+    --background-color: hsl(0, 0%, 98%);
+    --text-color: hsl(200, 15%, 8%);
+    --element-color: hsl(0, 0%, 100%);
+    --input-color: hsl(0, 0%, 52%);
+  }
+  
+  /* Dark Theme */
+  html.dark {
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+    --element-color: hsl(209, 23%, 22%);
+    --input-color: hsl(0, 0%, 52%);
+  }
+  
+  /* Base styles that use the variables */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  header {
+    background-color: var(--element-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="checkbox"] {
+    margin-left: 0.5rem;
+  }
+  
